@@ -5,19 +5,13 @@ namespace LogisticaApp.Models
         public int IdCliente { get; set; }
         public string TipoCliente { get; set; }
 
-        public Cliente(
-            int idCliente,
-            string tipoCliente,
-            string nome,
-            string cpf,
-            string telefone,
-            string email,
-            Endereco endereco
-        ) : base(nome, cpf, telefone, email, endereco)
+        public Cliente(int idCliente, string tipoCliente, string nome, string cpf, string telefone, string email)
+    : base(nome, cpf, telefone, email, new Endereco("", "", "", "", "", ""))
         {
             IdCliente = idCliente;
             TipoCliente = tipoCliente;
         }
+
 
         public override void ExibirInfo()
         {

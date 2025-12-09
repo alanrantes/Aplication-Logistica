@@ -21,7 +21,8 @@ namespace LogisticaApp.Models
             Endereco origem,
             Endereco destino,
             double distanciaKm,
-            DateTime dataEntrega
+            DateTime dataEntrega,
+            NotaFiscal notaFiscal  // AGORA O CONSTRUTOR TEM A NF
         )
         {
             IdEntrega = idEntrega;
@@ -32,6 +33,7 @@ namespace LogisticaApp.Models
             Destino = destino;
             DistanciaKm = distanciaKm;
             DataEntrega = dataEntrega;
+            NotaFiscal = notaFiscal;
             Status = "Pendente";
         }
 
@@ -42,19 +44,16 @@ namespace LogisticaApp.Models
 
         public double CalcularTempoHoras()
         {
-            double velocidadeMedia = 60; 
+            double velocidadeMedia = 60;
             return DistanciaKm / velocidadeMedia;
         }
 
         public double CalcularCusto()
         {
-            double custoPorKm = 3.5;
-            double custoBase = DistanciaKm * custoPorKm;
-
             if (NotaFiscal != null)
                 return NotaFiscal.ValorTotal;
 
-            return custoBase;
+            return DistanciaKm * 3.5;
         }
 
         public void ExibirResumo()
@@ -64,12 +63,10 @@ namespace LogisticaApp.Models
             Console.WriteLine($"Cliente: {Cliente.Nome}");
             Console.WriteLine($"Motorista: {Motorista.Nome} ({Motorista.CategoriaCNH})");
             Console.WriteLine($"Veículo: {Veiculo.Marca} {Veiculo.Modelo}");
-            Console.WriteLine($"Status: {Status}");
             Console.WriteLine($"Origem: {Origem}");
             Console.WriteLine($"Destino: {Destino}");
             Console.WriteLine($"Distância: {DistanciaKm} km");
-            Console.WriteLine($"Tempo estimado: {CalcularTempoHoras():0.0} horas");
-            Console.WriteLine($"Custo estimado: R$ {CalcularCusto():0.00}");
+            Console.WriteLine($"Custo: R$ {CalcularCusto():0.00}");
         }
     }
 }

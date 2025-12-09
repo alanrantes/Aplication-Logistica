@@ -7,6 +7,7 @@ namespace LogisticaApp.Models
         public string CategoriaCNH { get; set; } 
         public string Status { get; set; } 
 
+        // Construtor completo
         public Motorista(
             int idMotorista,
             string numeroCNH,

@@ -8,9 +8,10 @@ namespace LogisticaApp.Models
         public string Marca { get; set; }
         public string Placa { get; set; }
         public double Valor { get; set; }
+        public double CapacidadeKg { get; set; }
         public int QtdRodas { get; set; }
 
-        public Veiculo(string modelo, int ano, string cor, string marca, string placa, double valor, int qtdRodas)
+        public Veiculo(string modelo, int ano, string cor, string marca, string placa, double valor, double capacidadeKg, int qtdRodas)
         {
             Modelo = modelo;
             Ano = ano;
@@ -18,6 +19,7 @@ namespace LogisticaApp.Models
             Marca = marca;
             Placa = placa;
             Valor = valor;
+            CapacidadeKg = capacidadeKg;
             QtdRodas = qtdRodas;
         }
 
