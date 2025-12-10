@@ -7,8 +7,9 @@ namespace LogisticaApp.Models
 
         public Caminhao(
             string modelo, int ano, string cor, string marca, string placa,
-            double valor, int qtdRodas, double capacidadeCargaKg, int numeroEixos
-        ) : base(modelo, ano, cor, marca, placa, valor, qtdRodas)
+            double valor, double capacidadeKg, int qtdRodas,
+            double capacidadeCargaKg, int numeroEixos
+        ) : base(modelo, ano, cor, marca, placa, valor, capacidadeKg, qtdRodas)
         {
             CapacidadeCargaKg = capacidadeCargaKg;
             NumeroEixos = numeroEixos;

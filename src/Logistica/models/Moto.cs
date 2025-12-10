@@ -6,8 +6,9 @@ namespace LogisticaApp.Models
 
         public Moto(
             string modelo, int ano, string cor, string marca, string placa,
-            double valor, int qtdRodas, int cilindrada
-        ) : base(modelo, ano, cor, marca, placa, valor, qtdRodas)
+            double valor, double capacidadeKg, int qtdRodas,
+            int cilindrada
+        ) : base(modelo, ano, cor, marca, placa, valor, capacidadeKg, qtdRodas)
         {
             Cilindrada = cilindrada;
         }

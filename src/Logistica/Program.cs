@@ -96,16 +96,20 @@ while (executando)
         case "3":
             Console.WriteLine("=== REGISTRAR ENTREGA ===");
 
-            // Cliente
-            Console.WriteLine("Clientes:");
+            if (clientes.Count == 0 || motoristas.Count == 0)
+            {
+                Console.WriteLine("⚠ É necessário cadastrar cliente e motorista antes de registrar entregas!");
+                break;
+            }
+
+            Console.WriteLine("\nClientes:");
             foreach (var c in clientes)
                 Console.WriteLine($"{c.IdCliente} - {c.Nome}");
 
             Console.Write("ID do cliente: ");
             Cliente cliEnt = clientes.First(c => c.IdCliente == int.Parse(Console.ReadLine()!));
 
-            // Motorista
-            Console.WriteLine("Motoristas:");
+            Console.WriteLine("\nMotoristas:");
             foreach (var m in motoristas)
                 Console.WriteLine($"{m.IdMotorista} - {m.Nome}");
 
@@ -114,7 +118,6 @@ while (executando)
 
             Carro carro = new Carro("Onix", 2020, "Prata", "Chevrolet", "ABC-1234", 45000, 300, 4, 4);
 
-            // Origem e destino
             Console.Write("Rua origem: ");
             string ruaO = Console.ReadLine()!;
             Endereco origem = new Endereco(ruaO, "100", "Centro", "Cidade", "Estado", "11111-111");
@@ -129,10 +132,8 @@ while (executando)
             Console.Write("ID da entrega: ");
             int idEnt = int.Parse(Console.ReadLine()!);
 
-            // Nota fiscal
             NotaFiscal nf = new NotaFiscal(idEnt, DateTime.Now, cliEnt, carro, 100);
 
-            // Entrega
             Entrega entrega = new Entrega(
                 idEnt, cliEnt, motEnt, carro,
                 origem, destino,
@@ -143,6 +144,35 @@ while (executando)
             entregas.Add(entrega);
 
             Console.WriteLine("Entrega registrada com sucesso!");
+            break;
+
+
+        case "4":
+            Console.WriteLine("\n=== LISTA DE ENTREGAS ===");
+
+            if (entregas.Count == 0)
+            {
+                Console.WriteLine("Nenhuma entrega registrada.");
+                break;
+            }
+
+            foreach (var e in entregas)
+            {
+                e.ExibirResumo();
+                Console.WriteLine("-----------------------------------");
+            }
+
+            break;
+
+
+        case "0":
+            Console.WriteLine("Encerrando sistema...");
+            executando = false;
+            break;
+
+
+        default:
+            Console.WriteLine("Opção inválida, tente novamente.");
             break;
     }
 }

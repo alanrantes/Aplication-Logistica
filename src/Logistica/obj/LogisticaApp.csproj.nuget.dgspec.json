@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Logística\\src\\LogisticaApp\\LogisticaApp.csproj": {}
+    "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Sistema\\src\\Logistica\\LogisticaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Logística\\src\\LogisticaApp\\LogisticaApp.csproj": {
+    "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Sistema\\src\\Logistica\\LogisticaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Logística\\src\\LogisticaApp\\LogisticaApp.csproj",
+        "projectUniqueName": "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Sistema\\src\\Logistica\\LogisticaApp.csproj",
         "projectName": "LogisticaApp",
-        "projectPath": "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Logística\\src\\LogisticaApp\\LogisticaApp.csproj",
+        "projectPath": "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Sistema\\src\\Logistica\\LogisticaApp.csproj",
         "packagesPath": "C:\\Users\\Alan Lacerda Arantes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Logística\\src\\LogisticaApp\\obj\\",
+        "outputPath": "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Sistema\\src\\Logistica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alan Lacerda Arantes\\AppData\\Roaming\\NuGet\\NuGet.Config",
