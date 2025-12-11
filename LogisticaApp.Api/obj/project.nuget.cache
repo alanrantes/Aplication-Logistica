@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "QkUq243n+Zk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alan Lacerda Arantes\\OneDrive\\Área de Trabalho\\Sistema\\LogisticaApp.Api\\LogisticaApp.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alan Lacerda Arantes\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "C:\\Users\\Alan Lacerda Arantes\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "C:\\Users\\Alan Lacerda Arantes\\.nuget\\packages\\microsoft.openapi\\2.3.0\\microsoft.openapi.2.3.0.nupkg.sha512",
+    "C:\\Users\\Alan Lacerda Arantes\\.nuget\\packages\\swashbuckle.aspnetcore\\10.0.1\\swashbuckle.aspnetcore.10.0.1.nupkg.sha512",
+    "C:\\Users\\Alan Lacerda Arantes\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.0.1\\swashbuckle.aspnetcore.swagger.10.0.1.nupkg.sha512",
+    "C:\\Users\\Alan Lacerda Arantes\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.0.1\\swashbuckle.aspnetcore.swaggergen.10.0.1.nupkg.sha512",
+    "C:\\Users\\Alan Lacerda Arantes\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.0.1\\swashbuckle.aspnetcore.swaggerui.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
