@@ -2,6 +2,8 @@ namespace LogisticaApp.Models
 {
     public abstract class Veiculo
     {
+        public int Id { get; set; } // 🔹 CHAVE PRIMÁRIA (OBRIGATÓRIA)
+
         public string Modelo { get; set; }
         public int Ano { get; set; }
         public string Cor { get; set; }
@@ -11,7 +13,18 @@ namespace LogisticaApp.Models
         public double CapacidadeKg { get; set; }
         public int QtdRodas { get; set; }
 
-        public Veiculo(string modelo, int ano, string cor, string marca, string placa, double valor, double capacidadeKg, int qtdRodas)
+        // 🔹 CONSTRUTOR VAZIO (OBRIGATÓRIO PRO EF)
+        protected Veiculo() { }
+
+        public Veiculo(
+            string modelo,
+            int ano,
+            string cor,
+            string marca,
+            string placa,
+            double valor,
+            double capacidadeKg,
+            int qtdRodas)
         {
             Modelo = modelo;
             Ano = ano;

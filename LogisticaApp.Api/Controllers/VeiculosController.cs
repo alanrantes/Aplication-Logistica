@@ -1,5 +1,7 @@
+using LogisticaApp.Api.Data;
 using LogisticaApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace LogisticaApp.Api.Controllers
 {
@@ -7,19 +9,25 @@ namespace LogisticaApp.Api.Controllers
     [Route("api/[controller]")]
     public class VeiculosController : ControllerBase
     {
-        // Lista temporária em memória
-        private static List<Veiculo> veiculos = new List<Veiculo>();
+        private readonly AppDbContext _context;
+
+        public VeiculosController(AppDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
+            var veiculos = await _context.Veiculos.ToListAsync();
             return Ok(veiculos);
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] Veiculo veiculo)
+        public async Task<IActionResult> Post([FromBody] Veiculo veiculo)
         {
-            veiculos.Add(veiculo);
+            _context.Veiculos.Add(veiculo);
+            await _context.SaveChangesAsync();
             return Ok(veiculo);
         }
     }
