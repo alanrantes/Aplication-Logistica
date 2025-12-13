@@ -7,28 +7,30 @@ namespace LogisticaApp.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class VeiculosController : ControllerBase
+    public class MotosController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public VeiculosController(AppDbContext context)
+        public MotosController(AppDbContext context)
         {
             _context = context;
         }
 
+        // GET: api/motos
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var veiculos = await _context.Veiculos.ToListAsync();
-            return Ok(veiculos);
+            var motos = await _context.Motos.ToListAsync();
+            return Ok(motos);
         }
 
+        // POST: api/motos
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Veiculo veiculo)
+        public async Task<IActionResult> Post([FromBody] Moto moto)
         {
-            _context.Veiculos.Add(veiculo);
+            _context.Motos.Add(moto);
             await _context.SaveChangesAsync();
-            return Ok(veiculo);
+            return CreatedAtAction(nameof(Get), moto);
         }
     }
 }

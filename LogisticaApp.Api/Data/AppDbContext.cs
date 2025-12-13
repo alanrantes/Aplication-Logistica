@@ -16,11 +16,12 @@ namespace LogisticaApp.Api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Veiculo>()
-                .HasDiscriminator<string>("TipoVeiculo")
-                .HasValue<Carro>("Carro")
-                .HasValue<Caminhao>("Caminhao")
-                .HasValue<Moto>("Moto");
+            // 🔹 Mapeamento de herança (Table Per Type - TPT)
+            modelBuilder.Entity<Carro>().ToTable("Carros");
+            modelBuilder.Entity<Caminhao>().ToTable("Caminhoes");
+            modelBuilder.Entity<Moto>().ToTable("Motos");
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
